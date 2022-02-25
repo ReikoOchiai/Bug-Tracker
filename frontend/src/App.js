@@ -1,7 +1,12 @@
-import "./App.css";
+import React from "react";
+import Login from "./Views/Login/login";
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <Login />
+    </>
+  );
 }
 
 export default App;
