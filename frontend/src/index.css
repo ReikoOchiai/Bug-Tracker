@@ -1,12 +1,15 @@
 * {
-  margin: 0;
-  padding: 0;
   --prim-color: #22333b;
   --secondary-color: #3f4238;
   color: #eae0d5;
+  --card-color: #cae1ff
   --font-family: "Open Sans", sans-serif;
 }
 
+#root {
+  grid-template-columns: 20% 80%;
+  display: grid;
+}
 button {
   background: #ffe8d6;
   color: var(--prim-color);
@@ -20,4 +23,13 @@ button {
 button:hover {
   transition: all 0.3s;
   background: white;
+}
+
+
+.page-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  grid-column: 2;
 }
