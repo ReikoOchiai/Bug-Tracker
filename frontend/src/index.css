@@ -1,8 +1,8 @@
 * {
   --prim-color: #22333b;
   --secondary-color: #3f4238;
-  color: #eae0d5;
-  --card-color: #cae1ff
+  color: white;
+  --card-color: #cae1ff;
   --font-family: "Open Sans", sans-serif;
 }
 
@@ -11,20 +11,20 @@
   display: grid;
 }
 button {
-  background: #ffe8d6;
+  background: #cc5500;
   color: var(--prim-color);
   border-radius: 5px;
   padding: 5px 20px;
   font: normal bold 18px var(--font-family);
   text-align: center;
   margin-bottom: 10px;
+  opacity: 0.8;
 }
 
 button:hover {
   transition: all 0.3s;
   background: white;
 }
-
 
 .page-container {
   display: flex;
