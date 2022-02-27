@@ -11,10 +11,12 @@ export default () => {
     dispatch(getBugs());
   }, [bugs.length < 1]);
 
+  function BugClicked(name) {}
+
   return (
     <div className="page-container">
       {bugs.map((bug, key) => (
-        <BugCard key={key} bug={bug} />
+        <BugCard key={key} bug={bug} clicked={BugClicked} />
       ))}
     </div>
   );
