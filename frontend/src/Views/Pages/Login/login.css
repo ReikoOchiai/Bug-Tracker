@@ -7,7 +7,7 @@
 }
 
 .login-panel {
-  background-color: var(--secondary-color);
+  background-color: var(--prim-color);
   width: 50vw;
   border-radius: 5px;
   margin: 25vh auto;

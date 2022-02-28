@@ -1,5 +1,5 @@
 import React from "react";
-import Login from "./Views/Login/login";
+import Login from "./Views/Pages/Login/login";
 import { useSelector } from "react-redux";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Sidebar from "./Views/sidebar/sidebar";
@@ -16,7 +16,7 @@ function App() {
         <>
           <Sidebar />
           <Switch>
-            <Route path="/viewbugs">
+            <Route path="/viewBugs">
               <ViewBugPage />
             </Route>
           </Switch>
