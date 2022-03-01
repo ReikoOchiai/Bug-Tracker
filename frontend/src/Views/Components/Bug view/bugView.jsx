@@ -8,7 +8,10 @@ export default (props) => {
 
   return (
     <div className="bug-view">
-      <h1>{bug.name}</h1>
+      <button onclick={props.clicked} className="close-btn">
+        Close
+      </button>
+      <h2>{bug.name}</h2>
       <ViewSection title="Details" info={bug.details} />
       <ViewSection title="Steps" info={bug.steps} />
       <ViewSection title="Priority" info={bug.priority} />
