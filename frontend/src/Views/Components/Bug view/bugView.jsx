@@ -2,13 +2,16 @@ import React from "react";
 import ViewSection from "./component/bugViewSection";
 import BugModel from "../../../Modules/bugModel";
 import "./bugView.css";
+import { useDispatch } from "react-redux";
+import { markComplete } from "../../../Controllers/Redux/bugSlice";
 
 export default (props) => {
+  const dispatch = useDispatch();
   const bug = new BugModel(props.bug);
 
   return (
     <div className="bug-view">
-      <button onclick={props.clicked} className="close-btn">
+      <button onClick={props.clicked} className="close-btn">
         Close
       </button>
       <h2>{bug.name}</h2>
@@ -18,6 +21,14 @@ export default (props) => {
       <ViewSection title="Creator" info={bug.creator} />
       <ViewSection title="App Version" info={bug.version} />
       <ViewSection title="Time Created" info={bug.time} />
+
+      <button
+        onclick={() => {
+          dispatch(markComplete());
+        }}
+      >
+        Mark Complete
+      </button>
     </div>
   );
 };
