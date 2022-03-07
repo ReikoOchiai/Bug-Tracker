@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getBugs } from "../../Controllers/Redux/bugSlice";
@@ -32,7 +33,7 @@ export default () => {
       {DISPLAY_BUG.isDisplayed && (
         <BugView
           clicked={BugClicked}
-          bug={bugs.filter((bug) => bug.name == DISPLAY_BUG.name)[0]}
+          bug={bugs.filter((bug) => bug.name === DISPLAY_BUG.name)[0]}
         />
       )}
     </div>

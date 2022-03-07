@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Sidebar from "./Views/sidebar/sidebar";
 import ViewBugPage from "./Views/Pages/viewBugs";
+import CreateBug from "./Views/Components/Bug Create & edit/bugForm";
 
 function App() {
   const { auth } = useSelector((state) => state);
@@ -19,6 +20,12 @@ function App() {
             <Route path="/viewBugs">
               <ViewBugPage />
             </Route>
+            <Router path="/create">
+              {" "}
+              <div className="page-container">
+                <CreateBug title="Create Bug" />
+              </div>
+            </Router>
           </Switch>
         </>
       )}

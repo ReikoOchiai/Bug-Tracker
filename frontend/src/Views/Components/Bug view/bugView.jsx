@@ -1,6 +1,7 @@
+/* eslint-disable import/no-anonymous-default-export */
 import React from "react";
 import ViewSection from "./component/bugViewSection";
-import BugModel from "../../../Modules/bugModel";
+import BugModel from "../../../Models/bugModel";
 import "./bugView.css";
 import { useDispatch } from "react-redux";
 import { markComplete } from "../../../Controllers/Redux/bugSlice";
@@ -23,7 +24,7 @@ export default (props) => {
       <ViewSection title="Time Created" info={bug.time} />
 
       <button
-        onclick={() => {
+        onClick={() => {
           dispatch(markComplete());
         }}
       >

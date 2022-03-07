@@ -1,4 +1,4 @@
-import bugModel from "../Modules/bugModel";
+import bugModel from "../Models/bugModel";
 
 export function retrieveBugs() {
   let data = [];
