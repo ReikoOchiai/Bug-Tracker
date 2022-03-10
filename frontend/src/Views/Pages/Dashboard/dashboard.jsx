@@ -7,15 +7,30 @@ import Card from "../../Components/Dashboard/card";
 export default () => {
   const dispatch = useDispatch();
   const bugs = useSelector((state) => state.bugs);
+  let highCount = 0;
+  let midCount = 0;
+  let lowCount = 0;
+
+  if (bugs != undefined) {
+    highCount = filterBugs(1);
+    midCount = filterBugs(2);
+    lowCount = filterBugs(3);
+  }
+
+  function filterBugs(priority) {
+    return bugs.filter((bug) => {
+      return bug.priority == priority;
+    });
+  }
 
   useEffect(() => {
-    dispatch(getBugs);
+    dispatch(getBugs());
   }, [bugs == undefined]);
   return (
     <div className="page-container">
-      <Card priority="1" count="10"></Card>;
-      <Card priority="2" count="10"></Card>;
-      <Card priority="3" count="10"></Card>;
+      <Card priority="1" count={highCount.length} />;
+      <Card priority="2" count={midCount.length} />;
+      <Card priority="3" count={lowCount.length} />;
     </div>
   );
 };
