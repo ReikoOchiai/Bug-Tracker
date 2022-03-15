@@ -1,9 +1,10 @@
 const route = require("express").Router();
 const userModel = require("../../Model/userModel");
+
 //creating user
 route.post("/user", (req, res) => {
   userModel
-    .create(req, body)
+    .create(req.body)
     .then((user) => {
       if (!user) return res.status(400).send("there was an error");
       res.send("create user");
@@ -51,3 +52,5 @@ route
         if (err) res.status(400).send(err);
       });
   });
+
+module.exports = route;
