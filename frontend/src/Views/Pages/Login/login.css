@@ -4,11 +4,16 @@
   position: absolute;
   grid-column: 1/2;
   margin: -8px;
+  background: url(../../../images/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.267);
+  background-blend-mode: multiply;
 }
 
 .login-panel {
   background-color: var(--prim-color);
-  width: 50vw;
+  width: 390px;
   border-radius: 5px;
   margin: 25vh auto;
   display: flex;
