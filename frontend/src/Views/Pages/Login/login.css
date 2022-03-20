@@ -7,8 +7,6 @@
   background: url(../../../images/background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: rgba(0, 0, 0, 0.267);
-  background-blend-mode: multiply;
 }
 
 .login-panel {
@@ -20,6 +18,7 @@
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
+  border: 1.5px solid white;
 }
 
 .login-panel h1 {
@@ -34,4 +33,5 @@
   margin: 10px;
   padding-left: 5px;
   color: black;
+  font-size: 18px;
 }

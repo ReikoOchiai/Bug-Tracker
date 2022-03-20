@@ -26,10 +26,10 @@ export default () => {
   return (
     <div className="loginBG">
       <form className="login-panel">
-        <h1>Login:</h1>
+        <h1>BUG TRACKER</h1>
         <input
           name="name"
-          placeholder="Name"
+          placeholder="Username"
           onChange={inputChanged}
           value={formInput.name}
         ></input>
